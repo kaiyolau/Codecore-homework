@@ -1,0 +1,27 @@
+<%- include("../partials/header.ejs") %>
+
+    <h1>
+        create a new cohort
+    </h1>
+    <form action="/cohorts" method="POST">
+        <div class="'form-control">
+            <label for="logoUrl" class="form-label">Logo Url</label>
+            <input type="url" class="form-control" ,id="logoUrl" name="logoUrl" placeholder="e.g.http://www.example.com/some.png"
+                >
+
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Flying Funks"
+                >
+
+                <label for="members" class="form-label">Members</label>
+                <textarea class="form-control" id="members" name="members" rows="3" >
+                </textarea>
+        </div>
+
+
+
+        <input type="submit" value="Create Post" class="btn btn-outline-success" value="submit">
+    </form>
+
+
+    <%- include("../partials/footer.ejs") %>

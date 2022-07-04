@@ -1,0 +1,20 @@
+<%- include("./partials/header.ejs") %>
+
+<%if(cohort && parseInt(quantity) > 0){%>
+
+<% 
+let members_toArray = cohort.members.split(","),  
+chunkSize =  parseInt(quantity),
+result = []
+%>
+    <% for( let i = 0 ; i < members_toArray.length ; i+= chunkSize) { %>
+            result.push(members_toArray[i].slice(i , i + chunkSize)
+    <%}%>
+    <% for( let i=0 ; i < result.length ; i+=chunkSize) { %>
+        <p>
+            <%=result[i].join()%>
+        </p>
+    <%}%>
+<%}%>
+
+<%- include("./partials/footer.ejs") %>

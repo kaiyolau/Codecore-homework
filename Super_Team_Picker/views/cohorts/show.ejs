@@ -1,0 +1,45 @@
+<%- include("../partials/header.ejs") %>
+
+<%if(cohort){%>
+    <div class="card" style="width: 18rem;">
+    
+            <div class="card-body">
+                <h5 class="card-title">
+                    <%- cohort.name %>
+                </h5>
+                <p class="card-text">
+                    <%- cohort.members %>
+                </p>
+                
+                <br>
+                <h4>Method</h4>
+                <form action="/<%= cohort.id %>" method="GET">
+                    <input type="radio" class="team-count" id="team-count" name="team-count" value="team-count">
+                    <label for="team-count">Team Counts</label>
+                    <br>
+                    <input type="radio" class="number-per-team" id="number-per-team" name="number-per-team" value="team-count">
+                    <label for="number-per-team">Number Per Team</label>
+                    <br>
+                    <br>
+                    <label for="quantity">Quantity</label>
+                    <input type='text' class="quantity" id="quantity" name="quantity">
+                    <br>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Assign Team</button>
+                </form>
+
+                
+                <br>
+                <br>
+                <form action="/cohorts/<%- cohort.id %>" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="submit" class="btn btn-outline-danger" value="Delete">
+                </form>
+                <a href="/cohorts/<%- cohort.id %>/edit">Edit</a>
+            </div>
+    </div>
+
+
+<%}%>
+
+<%- include("../partials/footer.ejs") %>

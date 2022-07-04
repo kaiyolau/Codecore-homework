@@ -1,0 +1,22 @@
+<%- include("../partials/header.ejs") %>
+
+    <h1>Edit cohort</h1>
+    <form action="/cohorts/<%- cohort.id %>" method="POST">
+        <input type="hidden" name="_method" value="PATCH">
+
+        <div class="'form-control">
+            <input type="text" class="form-control" name="name" placeholder="What is your post about?"
+                value="<%= cohort ? cohort.name : '' %>">
+        </div>
+        <div class="form-group">
+            <input type="url" class="form-control" name="logoUrl" placeholder="e.g. http://image.com/myPic.jpg"
+                value="<%= cohort ? cohort.logoUrl : '' %>">
+        </div>
+        <div class="form-group">
+            <textarea name="members" placeholder="type members here" cols="60" rows="5"><%- cohort ? cohort.members : '' %>
+        </textarea>
+        </div>        
+            <input type="submit" value="Edit Post" class="btn btn-outline-success">
+    </form>
+
+    <%- include("../partials/footer.ejs") %>
