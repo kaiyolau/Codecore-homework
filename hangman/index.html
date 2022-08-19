@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>HANGMAN</title>
+    <link rel="stylesheet" href="index.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Butcherman&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/7_gallows+head+torso+2leg+2arm.jpg" />
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center pt-4 pb-3 flex-column align-items-center" id="title">
+        <h1 class="title">HANGMAN</h1>
+        <!-- <p class="test"></p> -->
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <img class="hangman-img" src="images/1_gallows.jpg">
+            </div>
+            <div class="col-8">
+                <div class="keys container ">
+                    <div class="row d-flex">
+                        <button id="A" class="key rounded">
+                            A
+                        </button>
+                        <button id="B" class="key rounded">
+                            B
+                        </button>
+                        <button id="C"class="key rounded">
+                            C
+                        </button>
+                        <button id="D"class="key rounded">
+                            D
+                        </button>
+                        <button id="E"class="key rounded">
+                            E
+                        </button>
+                        <button id="F"class="key rounded">
+                            F
+                        </button>
+                        <button id="G"class="key rounded">
+                            G
+                        </button>
+                        <button id="H"class="key rounded">
+                            H
+                        </button>
+                        <button id="I"class="key rounded">
+                            I
+                        </button>
+                        <button id="J"class="key rounded">
+                            J
+                        </button>
+                    </div>
+                    <div class="row d-flex">
+                        <button id="K"class="key rounded">
+                            K
+                        </button>
+                        <button id="L"class="key rounded">
+                            L
+                        </button>
+                        <button id="M"class="key rounded">
+                            M
+                        </button>
+                        <button id="N"class="key rounded">
+                            N
+                        </button>
+                        <button id="O"class="key rounded">
+                            O
+                        </button>
+                        <button id="P"class="key rounded">
+                            P
+                        </button>
+                        <button id="Q"class="key rounded">
+                            Q
+                        </button>
+                        <button id="R"class="key mcrounded">
+                            R
+                        </button>
+                        <button id="S"class="key rounded">
+                            S
+                        </button>
+                        <button id="T"class="key rounded">
+                            T
+                        </button>
+                    </div>
+                    <div class="row">
+                        <button id="U"class="key rounded">
+                            U
+                        </button>
+                        <button id="V"class="key rounded">
+                            V
+                        </button>
+                        <button id="W"class="key rounded">
+                            W
+                        </button>
+                        <button id="X"class="key rounded">
+                            X
+                        </button>
+                        <button id="Y"class="key rounded">
+                            Y
+                        </button>
+                        <button id="Z"class="key rounded">
+                            Z
+                        </button>
+                    </div>
+                </div>
+                <div class="container answer mt-3 d-flex flex-column">
+                    <div class="word d-flex justify-content-center"></div>
+                    <div class="line d-flex justify-content-center flex-column align-items-center mt-3">
+                        <p class="text-light">Guess a male first name and play by clicking on the letters or pressing the keys on your keyboard</p>
+                        <p class="message">Good luck...</p>
+                        <p class="test">Name : </p>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-dark play-again text-center">Play Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+  <script type="text/javascript" src="index1.js"></script>
+  <!-- <script type="text/javascript" src="index.js"></script> -->
+
+</body>
+
+</html>
+
